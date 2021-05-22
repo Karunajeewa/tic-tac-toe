@@ -5,7 +5,7 @@ import { Container,  } from 'react-bootstrap';
 
 const Footer: React.FC = () =>{
     return(
-        <div className=" text-center py-3">
+        <div className="footer">
             footer
         </div>
     )
