@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
-import { Row, Container, Col } from 'react-bootstrap';
 
 
-const Square: React.FC = () =>{
+type SquareProps = {
+    value: string;
+    isFirstPlayer: boolean;
+    setFirstPlayer: (value:boolean) => void;
+}
+const Square: React.FC <SquareProps>= (props) =>{
+    const {value, isFirstPlayer, setFirstPlayer} = props;
+    const [showValue,setShowValue] = useState(value);
+    const handleClick = () => {
+        setShowValue(isFirstPlayer ? "x" : "o");
+        setFirstPlayer(!isFirstPlayer);
+    }
 
     return(
-               <div className="box">x</div>
+               <div className="box" onClick={handleClick}>{showValue}</div>
     )
 ;}
 export default Square;
