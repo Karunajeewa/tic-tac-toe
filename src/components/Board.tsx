@@ -8,8 +8,7 @@ const Board: React.FC = () =>{
     const nineBox: string[] = ['','','','','','','','',''];
     const renderBord = () => {
         return nineBox.map((value:any) =>
-        <Square value={value} isFirstPlayer={isFirstPlayer} setFirstPlayer={setIsFirstPlayer}/>
-            )
+        <Square value={value} isFirstPlayer={isFirstPlayer} setFirstPlayer={setIsFirstPlayer}/>)
     }
 
     return(
